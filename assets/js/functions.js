@@ -18,6 +18,7 @@
 
 function setOption(selectElement, value) { // https://stackoverflow.com/a/4324207/7142167
     return [...selectElement.options].some((option, index) => {
+        console.log(option, index);
         if (option.value === value) {
             selectElement.selectedIndex = index;
             return true;
@@ -31,7 +32,6 @@ function refresh() {
         if (data.replacements === undefined) {
             return;
         }
-        console.log(data.replacements);
         $("#planDate").html("Plan Date: " + data.date.string);
         $("#lastCheck").html("Last Check: " + data.last_check.string);
         let replacementsTable = document.getElementById("replacementsTable");
@@ -49,12 +49,12 @@ function refresh() {
                 cell2.innerText = val.schoolhour + ". Stunde";
                 cell3.innerText = val.schoolsubject;
                 if (val.schoolsubject === "") {
-                    cell3.className = "egoicon-arrow-right";
+                    cell3.className = "icon-arrow-right";
                 }
                 cell4.innerText = val.schoolroom;
-                cell5.className = "egoicon-check";
+                cell5.className = "icon-check";
                 if (val.dropped === 1) {
-                    cell5.className = "egoicon-close";
+                    cell5.className = "icon-close";
                 }
             });
         } else {
@@ -80,6 +80,7 @@ function refresh() {
                 let row = notificationsTable.insertRow();
                 let cell1 = row.insertCell(0);
                 cell1.innerHTML = val.content;
+                cell1.className = "center";
             });
         } else {
             let row = notificationsTable.insertRow();
@@ -88,17 +89,4 @@ function refresh() {
             cell1.className = "center";
         }
     });
-}
-
-function findGetParameter(parameterName) { // https://stackoverflow.com/a/21210643/7142167
-    var result = null,
-        tmp = [];
-    location.search
-        .substr(1)
-        .split("&")
-        .forEach(function (item) {
-            tmp = item.split("=");
-            if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
-        });
-    return result;
 }

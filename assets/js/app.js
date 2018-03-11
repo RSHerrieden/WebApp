@@ -22,6 +22,30 @@ let autoreload = 900;
 $("#refresh").on("click", function (r) {
     refresh();
 });
+$(".menuRefresh").on("click", function (e) {
+    e.preventDefault();
+    refresh();
+});
+$(".button-collapse").sideNav({
+    closeOnClick: true,
+    draggable: true
+});
+
+$("#settingsModalSave").on("click", function (e) {
+    e.preventDefault();
+    schoolclass = $("#schoolclass").val();
+    localStorage.schoolclass = schoolclass;
+    autoreload = $("#autoRefreshInterval").val();
+    localStorage.autoreload = autoreload;
+    if (autoreload > 0) {
+        clearInterval(autoRefresh);
+        var autoRefresh = setInterval(refresh, autoreload * 1000);
+    } else {
+        clearInterval(autoRefresh)
+    }
+    refresh();
+});
+
 
 $(window).on("load", function () {
     window.applicationCache.addEventListener('updateready', function (e) {
@@ -30,22 +54,27 @@ $(window).on("load", function () {
             window.location.reload();
         }
     }, false);
+    let $tabs = $('.tabs');
+    if ($tabs.length) {
+        $tabs.tabs({'swipeable': false});
+    }
     if (!typeof(localStorage)) {
         alert("there are missing dependencies. This page might won't work properly!")
     } else {
         if (typeof localStorage.schoolclass !== 'undefined') {
             schoolclass = localStorage.schoolclass;
+            $("#schoolclass").val(schoolclass);
         }
         if (typeof localStorage.autoreload !== 'undefined') {
             autoreload = localStorage.autoreload;
+            $("#autoRefreshInterval").val(autoreload);
         }
     }
+    $('select').material_select();
+    $('.modal').modal();
     $("#lastModify").html("File Date: " + document.lastModified);
-    console.debug(document.lastModified);
     refresh();
     if (autoreload > 0) {
-        var reload = setInterval(function () {
-            refresh();
-        }, autoreload * 1000)
+        var autoRefresh = setInterval(refresh, autoreload * 1000);
     }
 });
