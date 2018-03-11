@@ -14,7 +14,7 @@ assets/fonts/icomoon.ttf
 assets/fonts/icomoon.svg
 assets/fonts/icomoon.eot
 
-# Resources that require a connection to this internet
+# Resources that require a connection to the internet
 NETWORK:
 proxy.php
 *

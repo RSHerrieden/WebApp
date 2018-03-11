@@ -50,7 +50,7 @@ $("#settingsModalSave").on("click", function (e) {
 $(window).on("load", function () {
     window.applicationCache.addEventListener('updateready', function (e) {
         window.applicationCache.swapCache();
-        if (confirm('Juhu! Eine neue Version ist vefügbar. Möchtest du sie laden?')) {
+        if (confirm('Juhu! Eine neue Version ist verfügbar. Möchtest du sie laden?')) {
             window.location.reload();
         }
     }, false);
@@ -59,7 +59,7 @@ $(window).on("load", function () {
         $tabs.tabs({'swipeable': false});
     }
     if (!typeof(localStorage)) {
-        alert("there are missing dependencies. This page might won't work properly!")
+        alert("There are missing dependencies. This page might won't work properly!")
     } else {
         if (typeof localStorage.schoolclass !== 'undefined') {
             schoolclass = localStorage.schoolclass;

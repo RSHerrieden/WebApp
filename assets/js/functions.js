@@ -85,7 +85,7 @@ function refresh() {
         } else {
             let row = notificationsTable.insertRow();
             let cell1 = row.insertCell(0);
-            cell1.innerHTML = "Heute keine Mittelungen";
+            cell1.innerHTML = "Heute keine Mitteilungen";
             cell1.className = "center";
         }
     });
