@@ -1,0 +1,20 @@
+CACHE MANIFEST
+
+# 8beccb6b48b13db12bc11347297d1621c9af88538977ecf1aa4294111f6c681f933f9e06a8ceb20deb62295a60599223d43413b2b955b3676f3eaf7d64de862f
+favicon.ico
+index.html
+assets/js/jquery.js
+assets/js/functions.js
+assets/fonts/ego-icons.css
+assets/fonts/egoicons.svg
+assets/fonts/egoicons.eot
+assets/fonts/egoicons.woff
+assets/fonts/egoicons.ttf
+assets/js/materialize.min.js
+
+
+# Resources that require a connection to this internet
+NETWORK:
+proxy.php
+assets/js/app.js
+*

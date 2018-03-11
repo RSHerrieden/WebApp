@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+  ~ WebApp RSHerrieden replacement plan
+  ~ Copyright (C) 2018  Moritz Fromm and Noah Seefried
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU Affero General Public License as
+  ~ published by the Free Software Foundation, either version 3 of the
+  ~ License, or (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU Affero General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Affero General Public License
+  ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<html lang="de" manifest="webapp.appcache">
+<head>
+    <meta charset="UTF-8">
+    <title>RSH Vertretungsplan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="assets/fonts/ego-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css" media="screen,projection"/>
+    <script src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+</head>
+<body>
+<nav class="nav-extended">
+    <div class="container">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">RS Herrieden</a>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent center-block">
+                <li class="tab"><a class="active" href="#replacements">Vertretungen</a></li>
+                <li class="tab"><a href="#notifications">Mitteilungen</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br>
+<div class="container">
+    <div id="replacements" class="col s12">
+        <table class="striped" id="replacementsTable" style="width: 100%">
+            <tbody></tbody>
+        </table>
+    </div>
+    <div id="notifications" class="col s12">
+        <table class="striped" id="notificationsTable" style="width: 100%">
+            <tbody></tbody>
+        </table>
+    </div>
+    <!--<form action="" method="get">-->
+    <!--<label for="autoRefreshInterval">Neuladen jede </label>-->
+    <!--<select name="autoRefreshInterval" id="autoRefreshInterval" size="1" onchange="alert(this.value)">-->
+    <!--<option value="0" selected>Aus</option>-->
+    <!--<option value="15">15 Sekunden</option>-->
+    <!--<option value="30">30 Sekunden</option>-->
+    <!--<option value="60">Minute</option>-->
+    <!--<option value="120">2 Minuten</option>-->
+    <!--<option value="300">5 Minuten</option>-->
+    <!--<option value="600">10 Minuten</option>-->
+    <!--<option value="900">15 Minuten</option>-->
+    <!--<option value="1800">30 Minuten</option>-->
+    <!--<option value="9000">Stunde</option>-->
+    <!--</select></form>-->
+    <!--<div class="egoicon-close"></div>-->
+    <!--<button id="refresh" class="egoicon-refresh" style="font-size: 32px"></button>-->
+    <!--<div id="lastModify"></div>-->
+    <!--<div id="lastCheck"></div>-->
+    <!--<div id="planDate"></div>-->
+</div>
+<footer class="page-footer">
+    <div class="footer-copyright">
+        <div class="container">
+            <a class="white-text" href="https://github.com/RSHerrieden/WebApp/blob/master/LICENSE"
+               referrerpolicy="no-referrer" target="_blank">&copy; Moritz Fromm &amp; Noah Seefried (AGPL v3)</a>
+            <a class="grey-text text-lighten-4 right" href="https://github.com/RSHerrieden/WebApp/blob/master/README.md"
+               referrerpolicy="no-referrer" target="_blank">GitHub</a>
+        </div>
+    </div>
+</footer>
+
+</div>
+<script src="assets/js/functions.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
