@@ -1,20 +1,31 @@
 CACHE MANIFEST
- # cd010d4c17eea4c709dc3350b2118b08cda7ae0fac1579711567f48502c0a6cbbf5f951660eb1eec3e6cb20a07a9f9107faad5327b5db0a6b0e45663e03e5a0e  index.html
- # 3228aa7ef6ad0d7a89d642e6cc41e945fcb9fda1c52971ea4b3784cdf4e8ae45b7a23e718ac5d9a3364ea63043034e5c88546e5076dc6b3e1f68c5731c68555f  assets/js/app.js
- # 5421be29cce5a83756fdcedb48765faae66e1994c39dbccecebd34b62e083b6a45a1ed85a44365ceb2efc956a8aa9711c1fc4ac42f982cba5618c8abc4cf817b  assets/js/functions.js
+# 25dcf37b182f10a22aeb9ff2309645b7d7da82bea4dd1014f5939d55658a295669fd2a42e9b2132ae04d875747d443786f7e83d69da0ed08454989c747bf5637  index.html
+# 3228aa7ef6ad0d7a89d642e6cc41e945fcb9fda1c52971ea4b3784cdf4e8ae45b7a23e718ac5d9a3364ea63043034e5c88546e5076dc6b3e1f68c5731c68555f  assets/js/app.js
+# 13adc5ef04cdec3ac8e3c3d1384fd2c47393c4f97175dec76e5c293090a2850ec3405a33a1292b166c68c235a4ee198a5d71af263cb5e2381baf88fa92e3ebfb  assets/js/functions.js
 
-index.html
 assets/js/app.js
 favicon.ico
 assets/js/jquery.js
-assets/js/functions.js
 assets/fonts/ego-icons.css
 assets/fonts/icomoon.woff
 assets/fonts/icomoon.ttf
 assets/fonts/icomoon.svg
 assets/fonts/icomoon.eot
+assets/fonts/roboto/Roboto-Thin.woff2
+assets/fonts/roboto/Roboto-Light.woff2
+assets/fonts/roboto/Roboto-Light.woff
+assets/fonts/roboto/Roboto-Medium.woff2
+assets/fonts/roboto/Roboto-Bold.woff
+assets/fonts/roboto/Roboto-Regular.woff
+assets/fonts/roboto/Roboto-Bold.woff2
+assets/fonts/roboto/Roboto-Medium.woff
+assets/fonts/roboto/Roboto-Thin.woff
+assets/fonts/roboto/Roboto-Regular.woff2
 
 # Resources that require a connection to this internet
 NETWORK:
+assets/js/functions.js
+index.html
+
 proxy.php
 *

@@ -17,7 +17,7 @@
   ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   -->
 <!--manifest="webapp.appcache"-->
-<html lang="de" manifest="webapp.appcache">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <title>RSH Vertretungsplan</title>
@@ -66,11 +66,20 @@
 <div class="container">
     <div class="row">
         <div id="replacements" class="col s12">
+            <div class="center" id="planInfo">
+                <span class="planDate"></span>
+                <span class="planWeek"></span>
+            </div>
+            <br>
             <table class="striped" id="replacementsTable" style="width: 100%">
                 <tbody></tbody>
             </table>
         </div>
         <div id="notifications" class="col s12">
+            <div class="center" id="planInfo">
+                <span class="planDate"></span>
+                <span class="planWeek"></span>
+            </div>
             <table class="striped" id="notificationsTable" style="width: 100%">
                 <tbody></tbody>
             </table>

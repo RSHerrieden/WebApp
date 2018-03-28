@@ -26,14 +26,25 @@ function setOption(selectElement, value) { // https://stackoverflow.com/a/432420
     });
 }
 
+const days = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Sammstag", "Sonntag"];
 function refresh() {
     let url = "proxy.php?" + $.param({class: schoolclass});
     $.getJSON(url, function (data) {
         if (data.replacements === undefined) {
             return;
         }
-        $("#planDate").html("Plan Date: " + data.date.string);
-        $("#lastCheck").html("Last Check: " + data.last_check.string);
+        let date = new Date((data.date.seconds)*1000);
+        let planDate = "Vertretungen für "+days[date.getDay()-1]+", " + data.date.string;
+        let planWeek = " - " + data.week  + " Woche";
+        if (data.week === "") {
+            planWeek = " - ? Woche";
+        }
+        $(".planDate").each(function() {
+            $(this).html(planDate);
+        });
+        $(".planWeek").each(function() {
+            $(this).html(planWeek);
+        });
         let replacementsTable = document.getElementById("replacementsTable");
         replacementsTable.innerHTML = "";
         if (data.amount.replacements >= 1) {
