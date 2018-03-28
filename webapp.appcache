@@ -22,7 +22,7 @@ assets/fonts/roboto/Roboto-Medium.woff
 assets/fonts/roboto/Roboto-Thin.woff
 assets/fonts/roboto/Roboto-Regular.woff2
 
-# Resources that require a connection to this internet
+# Resources that require a connection to the internet
 NETWORK:
 assets/js/functions.js
 index.html

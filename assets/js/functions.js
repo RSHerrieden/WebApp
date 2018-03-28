@@ -78,9 +78,15 @@ function refresh() {
 
             cell1.innerText = "Heute";
             cell2.innerText = "keine";
-            cell3.innerText = "";
-            cell4.innerText = "Vertretungen";
-            cell5.innerText = "";
+            if (schoolclass === "") {
+                cell3.innerText = "";
+                cell4.innerText = "Vertretungen";
+                cell5.innerText = "";
+            } else {
+                cell3.innerText = "";
+                cell4.innerText = "Vertretungen";
+                cell5.innerText = "für Klasse " + schoolclass.replace(/%/i, "");
+            }
         }
 
         let notificationsTable = document.getElementById("notificationsTable");
@@ -96,7 +102,7 @@ function refresh() {
         } else {
             let row = notificationsTable.insertRow();
             let cell1 = row.insertCell(0);
-            cell1.innerHTML = "Heute keine Mittelungen";
+            cell1.innerHTML = "Heute keine Mitteilungen";
             cell1.className = "center";
         }
     });
