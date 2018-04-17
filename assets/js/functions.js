@@ -35,7 +35,7 @@ function refresh() {
         }
         let date = new Date((data.date.seconds)*1000);
         let planDate = "Vertretungen für "+days[date.getDay()-1]+", " + data.date.string;
-        let planWeek = " - " + data.week  + " Woche";
+        let planWeek = " - " + "Woche " + data.week;
         if (data.week === "") {
             planWeek = " - ? Woche";
         }
