@@ -16,7 +16,8 @@
   ~ You should have received a copy of the GNU Affero General Public License
   ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   -->
-<html lang="de" manifest="webapp.appcache">
+<!--manifest="webapp.appcache"-->
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <title>RSH Vertretungsplan</title>
@@ -75,8 +76,8 @@
             </table>
         </div>
         <div id="notifications" class="col s12">
-            <div class="center planInfo">
-                <span class="notificationsDate"></span>
+            <div class="center" id="planInfo">
+                <span class="planDate"></span>
                 <span class="planWeek"></span>
             </div>
             <table class="striped" id="notificationsTable" style="width: 100%">
@@ -102,10 +103,10 @@
                         <option value="1800">30 Minuten</option>
                         <option value="9000">Stunde</option>
                     </select>
-                    <label for="autoRefreshInterval">Neuladen jede </label>
+                    <label>Neuladen jede </label>
                 </div>
                 <div class="input-field col s12">
-                    <select name="schoolclass" id="schoolClass">
+                    <select name="schoolclass" id="schoolclass">
                         <option value="">Alle</option>
                         <optgroup label="05">
                             <option value="05%a">05a</option>
@@ -144,7 +145,7 @@
                             <option value="10%d">10d</option>
                         </optgroup>
                     </select>
-                    <label for="schoolClass">Klasse</label>
+                    <label>Klasse</label>
                     <br><br>
                 </div>
             </form>
@@ -158,6 +159,9 @@
             </div>
         </div>
     </div>
+    <!--<div id="lastModify"></div>-->
+    <!--<div id="lastCheck"></div>-->
+    <!--<div id="planDate"></div>-->
     <span class=""></span>
 </div>
 <br>

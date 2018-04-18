@@ -27,28 +27,23 @@ function setOption(selectElement, value) { // https://stackoverflow.com/a/432420
 }
 
 const days = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Sammstag", "Sonntag"];
-
 function refresh() {
     let url = "proxy.php?" + $.param({class: schoolclass});
     $.getJSON(url, function (data) {
         if (data.replacements === undefined) {
             return;
         }
-        let date = new Date((data.date.seconds) * 1000);
-        let planDate = "Vertretungen für " + days[date.getDay() - 1] + ", " + data.date.string;
-        let notificationsDate = "Mitteilungen für " + days[date.getDay() - 1] + ", " + data.date.string;
+        let date = new Date((data.date.seconds)*1000);
+        let planDate = "Vertretungen für "+days[date.getDay()-1]+", " + data.date.string;
         let planWeek = " - " + "Woche " + data.week;
         if (data.week === "") {
             planWeek = " - ? Woche";
         }
-        $(".planDate").each(function () {
+        $(".planDate").each(function() {
             $(this).html(planDate);
         });
-        $(".planWeek").each(function () {
+        $(".planWeek").each(function() {
             $(this).html(planWeek);
-        });
-        $(".notificationsDate").each(function () {
-            $(this).html(notificationsDate);
         });
         let replacementsTable = document.getElementById("replacementsTable");
         replacementsTable.innerHTML = "";

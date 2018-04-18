@@ -33,7 +33,7 @@ $(".button-collapse").sideNav({
 
 $("#settingsModalSave").on("click", function (e) {
     e.preventDefault();
-    schoolclass = $("#schoolclass").val();
+    schoolclass = $("#schoolClass").val();
     localStorage.schoolclass = schoolclass;
     autoreload = $("#autoRefreshInterval").val();
     localStorage.autoreload = autoreload;
@@ -63,7 +63,7 @@ $(window).on("load", function () {
     } else {
         if (typeof localStorage.schoolclass !== 'undefined') {
             schoolclass = localStorage.schoolclass;
-            $("#schoolclass").val(schoolclass);
+            $("#schoolClass").val(schoolclass);
         }
         if (typeof localStorage.autoreload !== 'undefined') {
             autoreload = localStorage.autoreload;
